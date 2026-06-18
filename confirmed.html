@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>You're Registered | Heart Faith Hustle</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '877000395408931');
+fbq('track', 'PageView');
+fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=877000395408931&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  :root {
+    --hfh-red: #C8102E;
+    --hfh-red-dark: #8B0000;
+    --hfh-red-deep: #5C0000;
+    --hfh-black: #0A0A0A;
+    --hfh-charcoal: #1A1A1A;
+    --hfh-gray-line: #E5E5E5;
+    --hfh-gray-bg: #F5F5F5;
+    --hfh-gray-text: #4A4A4A;
+    --hfh-off-white: #FAFAFA;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--hfh-black);
+    font-size: 16px;
+    line-height: 1.55;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: var(--safe-bottom);
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  button, a { font-family: inherit; }
+
+  /* Header */
+  .site-header {
+    background: var(--hfh-black);
+    padding: 12px 16px;
+    padding-top: calc(12px + var(--safe-top));
+    border-bottom: 3px solid var(--hfh-red);
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-img {
+    height: 44px; width: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--hfh-red);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .brand-text {
+    color: #fff; font-weight: 800; font-size: 15px;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .brand-text span { color: var(--hfh-red); }
+
+  /* Hero */
+  .hero {
+    padding: 40px 20px 36px;
+    background: var(--hfh-off-white);
+    text-align: center;
+  }
+  .check-circle {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: var(--hfh-red);
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 18px rgba(200, 16, 46, 0.3);
+  }
+  .check-circle::after {
+    content: '';
+    width: 28px; height: 14px;
+    border-left: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    transform: rotate(-45deg);
+    margin-top: -8px;
+  }
+  .hero h1 {
+    font-size: 30px; font-weight: 900;
+    line-height: 1.15; letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+  .hero h1 .red { color: var(--hfh-red); }
+  .hero p.sub {
+    font-size: 16px; color: var(--hfh-gray-text);
+    max-width: 620px; margin: 0 auto;
+  }
+
+  /* Event card */
+  .event-card {
+    margin: 0 16px 32px;
+    background: var(--hfh-black);
+    color: #fff;
+    border-radius: 10px;
+    padding: 28px 22px;
+    text-align: center;
+    border-top: 4px solid var(--hfh-red);
+  }
+  .event-eyebrow {
+    color: var(--hfh-red);
+    font-size: 11px; font-weight: 800;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .event-day {
+    font-size: 24px; font-weight: 900;
+    line-height: 1.2; margin-bottom: 6px;
+  }
+  .event-time {
+    font-size: 17px; color: #DDD;
+    margin-bottom: 20px;
+  }
+  .event-tz { font-size: 13px; color: #999; }
+
+  /* Calendar buttons */
+  .cal-buttons {
+    display: flex; flex-direction: column;
+    gap: 10px; max-width: 360px;
+    margin: 24px auto 0;
+  }
+  .cal-btn {
+    background: #fff; color: var(--hfh-black);
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-weight: 700; font-size: 15px;
+    text-decoration: none;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    border: none;
+    cursor: pointer;
+    min-height: 52px;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .cal-btn:active { background: #EEE; transform: scale(0.98); }
+  .cal-btn .brand-icon {
+    width: 22px; height: 22px;
+    flex-shrink: 0;
+  }
+  .cal-btn .brand-icon.apple { fill: #000; }
+
+  /* Video section */
+  .video-section {
+    padding: 40px 16px;
+    background: var(--hfh-charcoal);
+  }
+  .video-section h2 {
+    color: #fff; font-size: 22px; font-weight: 800;
+    text-align: center; margin-bottom: 10px;
+  }
+  .video-section p.sub {
+    color: #BBB; font-size: 14px;
+    text-align: center; margin-bottom: 22px;
+    max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+  .video-frame {
+    max-width: 720px; margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #000;
+    border: 2px solid var(--hfh-red);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .video-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    color: #999; padding: 16px; text-align: center;
+  }
+  .play-icon {
+    width: 64px; height: 64px;
+    border-radius: 50%; background: var(--hfh-red);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+  }
+  .play-icon::after {
+    content: '';
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent #fff;
+    margin-left: 5px;
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+    display: block;
+  }
+
+  /* What to expect */
+  .expect {
+    padding: 40px 20px;
+    background: #fff;
+  }
+  .expect-inner { max-width: 720px; margin: 0 auto; }
+  .expect h2 {
+    font-size: 24px; font-weight: 900;
+    text-align: center; margin-bottom: 28px;
+  }
+  .expect h2 .red { color: var(--hfh-red); }
+  .expect-item {
+    display: flex; gap: 16px;
+    margin-bottom: 22px;
+    padding: 18px;
+    background: var(--hfh-gray-bg);
+    border-left: 4px solid var(--hfh-red);
+    border-radius: 6px;
+  }
+  .expect-num {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    background: var(--hfh-black);
+    color: var(--hfh-red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .expect-body h3 {
+    font-size: 16px; font-weight: 800;
+    margin-bottom: 4px; line-height: 1.3;
+  }
+  .expect-body p {
+    color: var(--hfh-gray-text);
+    font-size: 14px; line-height: 1.55;
+  }
+
+  /* Reminder banner */
+  .reminder {
+    background: #FFF5F5;
+    border-top: 1px solid #FBD9DE;
+    border-bottom: 1px solid #FBD9DE;
+    padding: 22px 20px;
+    text-align: center;
+    color: var(--hfh-black);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .reminder strong { color: var(--hfh-red); }
+
+  /* Footer */
+  .site-footer {
+    background: var(--hfh-black);
+    color: #BBB;
+    padding: 32px 20px 24px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .site-footer a { color: #BBB; text-decoration: none; margin: 0 8px; }
+  .footer-copy { margin-top: 14px; color: #666; font-size: 11.5px; }
+
+  /* Tablet up */
+  @media (min-width: 600px) {
+    .hero { padding: 56px 32px 48px; }
+    .hero h1 { font-size: 38px; }
+    .event-card { margin: 0 auto 40px; max-width: 560px; padding: 36px 28px; }
+    .event-day { font-size: 30px; }
+    .event-time { font-size: 20px; }
+    .cal-buttons { flex-direction: row; max-width: 480px; }
+    .cal-btn { flex: 1; }
+    .expect h2 { font-size: 28px; }
+    .video-section { padding: 56px 24px; }
+    .video-section h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img class="logo-img" src="logo.png" alt="Heart Faith Hustle">
+    <div class="brand-text">Heart <span>Faith</span> Hustle</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="check-circle"></div>
+  <h1>You're <span class="red">In</span>.</h1>
+  <p class="sub">Your seat for the live group call is reserved. Here is exactly what happens next.</p>
+</section>
+
+<div class="event-card">
+  <div class="event-eyebrow">Your Live Call</div>
+  <div class="event-day" id="event-day">Loading...</div>
+  <div class="event-time">6:00 PM Eastern</div>
+  <div class="event-tz">3:00 PM PT / 4:00 PM MT / 5:00 PM CT</div>
+
+  <div class="cal-buttons">
+    <a href="#" id="cal-google" class="cal-btn" target="_blank" rel="noopener">
+      <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+        <path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3c-1.6 4.5-5.9 7.7-11.3 7.7-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.4 6.5 28.9 4.4 24 4.4 13.2 4.4 4.4 13.2 4.4 24S13.2 43.6 24 43.6c11 0 19.6-8.8 19.6-19.6 0-1.3-.1-2.3-.4-3.5z"/>
+        <path fill="#FF3D00" d="M6.3 14.7l5.9 4.3C13.9 14.1 18.5 11 24 11c3.1 0 5.9 1.2 8 3.1l5.1-5.1C33.4 5.6 28.9 3.5 24 3.5c-7.7 0-14.4 4.4-17.7 11.2z"/>
+        <path fill="#4CAF50" d="M24 43.6c4.8 0 9.2-1.9 12.5-5l-5.8-4.9c-2 1.4-4.4 2.3-6.7 2.3-5.4 0-9.7-3.2-11.3-7.6L6.7 33C10 39.4 16.4 43.6 24 43.6z"/>
+        <path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.3 4.2-4.2 5.7l5.8 4.9c-.4.4 6.1-4.5 6.1-13.7 0-1.3-.1-2.3-.4-3.5z"/>
+      </svg>
+      Add to Google
+    </a>
+    <a href="#" id="cal-apple" class="cal-btn">
+      <svg class="brand-icon apple" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.05 20.28c-.98.95-2.05.86-3.08.38-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.38C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+      </svg>
+      Add to Apple
+    </a>
+    <a href="#" id="cal-outlook" class="cal-btn" target="_blank" rel="noopener">
+      <svg class="brand-icon" viewBox="0 0 21 21" aria-hidden="true">
+        <rect x="1" y="1" width="9" height="9" fill="#F25022"/>
+        <rect x="11" y="1" width="9" height="9" fill="#7FBA00"/>
+        <rect x="1" y="11" width="9" height="9" fill="#00A4EF"/>
+        <rect x="11" y="11" width="9" height="9" fill="#FFB900"/>
+      </svg>
+      Add to Outlook
+    </a>
+  </div>
+</div>
+
+<section class="video-section">
+  <h2>A Quick Word From Your Host</h2>
+  <p class="sub">60 seconds. Worth watching before Wednesday so you know what to expect.</p>
+  <div class="video-frame">
+    <video
+      class="hero-video"
+      src="orlando-confirmation.mp4#t=0.5"
+      playsinline
+      controls
+      preload="metadata">
+      Your browser doesn't support embedded video.
+      <a href="orlando-confirmation.mp4">Download the video</a> to watch.
+    </video>
+  </div>
+</section>
+
+<section class="expect">
+  <div class="expect-inner">
+    <h2>What to <span class="red">Expect</span></h2>
+
+    <div class="expect-item">
+      <div class="expect-num">1</div>
+      <div class="expect-body">
+        <h3>Watch your phone and email</h3>
+        <p>We'll send the Zoom link 1 hour before the call and again 15 minutes before. The 15-minute text is the one most people need.</p>
+      </div>
+    </div>
+
+    <div class="expect-item">
+      <div class="expect-num">2</div>
+      <div class="expect-body">
+        <h3>Bring a notebook and your questions</h3>
+        <p>The Q&amp;A at the end is the most valuable part. People who come with specific questions get specific answers.</p>
+      </div>
+    </div>
+
+    <div class="expect-item">
+      <div class="expect-num">3</div>
+      <div class="expect-body">
+        <h3>Show up on time</h3>
+        <p>We start at 6:00 PM Eastern sharp. The first 5 minutes are the framing for everything that follows. If you can join 2 minutes early, do.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="reminder">
+  <strong>Can't make it live?</strong> We run this call every Wednesday. You can join the next one with the same link. We don't send recordings.
+</div>
+
+<footer class="site-footer">
+  <div>
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a> |
+    <a href="mailto:[YOUR EMAIL]">Contact</a>
+  </div>
+  <div class="footer-copy">
+    &copy; 2026 Heart Faith Hustle. Licensed in all 50 states.
+  </div>
+</footer>
+
+<script>
+(function() {
+  try {
+    // ---- Get the next Wednesday at 6 PM Eastern as a real UTC Date ----
+    // We use Intl.DateTimeFormat to read the current date in NY time reliably.
+    function getEasternParts(d) {
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: false, weekday: 'short'
+      });
+      const parts = {};
+      fmt.formatToParts(d).forEach(p => { parts[p.type] = p.value; });
+      const wdMap = { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 };
+      return {
+        year: parseInt(parts.year, 10),
+        month: parseInt(parts.month, 10),
+        day: parseInt(parts.day, 10),
+        hour: parseInt(parts.hour, 10),
+        weekday: wdMap[parts.weekday]
+      };
+    }
+
+    // Convert an Eastern Y/M/D/H/M into a real UTC Date.
+    // ET offset is -5 standard, -4 daylight. We figure out which by asking
+    // Intl what offset NY currently has for that local moment.
+    function easternToUTC(y, m, d, h, mi) {
+      // Build a UTC date as a guess (assume -4), then check what NY thinks
+      // the actual local time is and correct.
+      const guess = Date.UTC(y, m - 1, d, h + 4, mi);
+      const guessDate = new Date(guess);
+      const ny = getEasternParts(guessDate);
+      // diffMinutes = difference between what NY shows vs what we asked for
+      const wantedMin = h * 60 + mi;
+      const gotMin = ny.hour * 60 + 0; // we only care about hour/minute granularity
+      const diffMin = wantedMin - gotMin;
+      return new Date(guess + diffMin * 60000);
+    }
+
+    const now = new Date();
+    const nowEt = getEasternParts(now);
+    let daysUntilWed = (3 - nowEt.weekday + 7) % 7;
+    // If it's Wednesday and already 6 PM ET or later, push to next week
+    if (daysUntilWed === 0 && nowEt.hour >= 18) daysUntilWed = 7;
+
+    // Walk forward from today's ET date by daysUntilWed
+    const baseEt = new Date(Date.UTC(nowEt.year, nowEt.month - 1, nowEt.day));
+    baseEt.setUTCDate(baseEt.getUTCDate() + daysUntilWed);
+    const wedY = baseEt.getUTCFullYear();
+    const wedM = baseEt.getUTCMonth() + 1;
+    const wedD = baseEt.getUTCDate();
+
+    const startUTC = easternToUTC(wedY, wedM, wedD, 18, 0); // 6 PM ET
+    const endUTC = new Date(startUTC.getTime() + 30 * 60 * 1000); // 30 minute call
+
+    // ---- Display the day on the page ----
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    // Use the ET parts of startUTC for display (always Wednesday)
+    const startEt = getEasternParts(startUTC);
+    document.getElementById('event-day').textContent =
+      `${dayNames[startEt.weekday]}, ${months[startEt.month - 1]} ${startEt.day}`;
+
+    // ---- Format helpers ----
+    function pad(n) { return n.toString().padStart(2, '0'); }
+    function formatGCal(d) {
+      return d.getUTCFullYear() + pad(d.getUTCMonth()+1) + pad(d.getUTCDate()) + 'T' +
+             pad(d.getUTCHours()) + pad(d.getUTCMinutes()) + '00Z';
+    }
+
+    const title = 'Heart Faith Hustle Career Walkthrough';
+    const details = 'Live group call about a career in life insurance with Heart Faith Hustle. Zoom link will be sent before the call.';
+    const location = 'Zoom (link sent before call)';
+
+    // ---- Google Calendar ----
+    document.getElementById('cal-google').href =
+      'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+      '&text=' + encodeURIComponent(title) +
+      '&dates=' + formatGCal(startUTC) + '/' + formatGCal(endUTC) +
+      '&details=' + encodeURIComponent(details) +
+      '&location=' + encodeURIComponent(location);
+
+    // ---- Outlook ----
+    document.getElementById('cal-outlook').href =
+      'https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent' +
+      '&subject=' + encodeURIComponent(title) +
+      '&body=' + encodeURIComponent(details) +
+      '&startdt=' + startUTC.toISOString() +
+      '&enddt=' + endUTC.toISOString() +
+      '&location=' + encodeURIComponent(location);
+
+    // ---- Apple (.ics file via data URL — works on iOS Safari) ----
+    const icsLines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Heart Faith Hustle//Webinar//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'BEGIN:VEVENT',
+      'UID:' + Date.now() + '@hfhcareers.com',
+      'DTSTAMP:' + formatGCal(new Date()),
+      'DTSTART:' + formatGCal(startUTC),
+      'DTEND:' + formatGCal(endUTC),
+      'SUMMARY:' + title,
+      'DESCRIPTION:' + details,
+      'LOCATION:' + location,
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ];
+    const ics = icsLines.join('\r\n');
+    document.getElementById('cal-apple').href =
+      'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+  } catch (err) {
+    // Visible fallback if anything breaks — at least the user can see the date
+    const el = document.getElementById('event-day');
+    if (el) el.textContent = 'This coming Wednesday';
+    console.error('Confirmation page calendar setup failed:', err);
+  }
+})();
+</script>
+
+</body>
+</html>
